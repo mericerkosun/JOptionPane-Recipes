@@ -1,8 +1,7 @@
 package recipesapp;
+
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -38,6 +37,7 @@ public class RecipesMain extends JFrame {
             ImageIcon icon = new ImageIcon(yemekResimleri[i]);
             Image image = icon.getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH);
             JLabel resimLabel = new JLabel(new ImageIcon(image));
+            resimLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2)); // Çerçeve eklendi
             String yemekIsmi = yemekler[i]; // final veya effectively final yapmak için
             resimLabel.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
